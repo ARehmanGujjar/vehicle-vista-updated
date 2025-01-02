@@ -78,103 +78,124 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <div className="left sm:w-[50%]">
-            <img
-              className="sm:w-[100%] sm:h-[100vh] w-[100%] h-[30vh] "
-              src={inspectorSignup.src}
-              alt=""
-            />
-          </div>
-          <div className="right sm:w-[50%] font-Roboto">
-            <form
-              className="container flex flex-col gap-[30px] sm:justify-center min-h-[100vh] sm:px-[40px]   px-[20px]"
-              method="diaolog"
-              onSubmit={handleSubmit}
-            >
-              <h1 className=" font-bold text-[42px]">Log In</h1>
-              <div className="userInput flex flex-col gap-[12px]">
-                <div className="email ">
-                  <p className="text-[14px]">Email Address</p>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter Email Here"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    value={values.email}
-                    className=" w-[100%]  outline-none border-b-2  px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
-                  />
-                  <br />
-                  {errors.email && touched.email ? (
-                    <p className="form-error  text-red-600">{errors.email}</p>
-                  ) : null}
-                  <br />
-                </div>
-                <div className="">
-                  <p className="text-[14px]">Password</p>
-                  <div className="flex  border-b-2 bg-[#F2F4F8] px-[8px]">
+          <div className="m-auto border shadow-lg relative border-black rounded-lg font-poppins mt-5">
+            <div className="img m-auto flex">
+              <Image
+                className="w-44 sm:w-56 sm:h-50 m-auto"
+                src={"/logoImages/appLogo.png"}
+                alt=""
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-12 sm:w-16 sm:h-16 m-auto absolute top-5 right-5"
+                src={"/insp_logo.jpeg"}
+                alt=""
+                width={100}
+                height={100}
+              />
+            </div>
+            <div className="right m-auto">
+              <form
+                className="container flex flex-col gap-1 sm:justify-center sm:px-10 py-1 px-2"
+                method="diaolog"
+                onSubmit={handleSubmit}
+              >
+              <h1 className="SignIn text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952]">Welcome Back Inspector!</h1>
+                <div className="userInput flex flex-col gap-[12px]">
+                  <div className="email ">
+                    <p className="text-sm md:text-lg">Email Address</p>
                     <input
-                      type="password"
-                      id="password"
-                      name="password"
+                      type="email"
+                      name="email"
+                      placeholder="Enter Email Here"
                       onBlur={handleBlur}
                       onChange={handleChange}
-                      value={values.password}
-                      placeholder="Enter Password Here"
-                      className="w-[100%] outline-none  py-[4px] bg-[#F2F4F8] text-[14px]"
+                      value={values.email}
+                      className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
                     />
-
-                    <button type="button" onClick={(e) => handlePassword(e)}>
-                      <img src={Eye.src} alt="" />
-                    </button>
+                    <br />
+                    {errors.email && touched.email ? (
+                      <p className="form-error  text-red-600">{errors.email}</p>
+                    ) : null}
+                    <br />
                   </div>
-                  {errors.password && touched.password ? (
-                    <p className="form-error  text-red-600">
-                      {errors.password}
+                  <div className="">
+                    <p className="text-sm md:text-lg">Password</p>
+                    <div className="flex border border-black bg-[#F2F4F8] rounded-lg p-2">
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.password}
+                        placeholder="Enter Password Here"
+                        className="w-[100%] outline-none  py-[4px] bg-[#F2F4F8] text-[14px]"
+                      />
+
+                      <button type="button" onClick={(e) => handlePassword(e)}>
+                        <img src={Eye.src} alt="" />
+                      </button>
+                    </div>
+                    {errors.password && touched.password ? (
+                      <p className="form-error  text-red-600">
+                        {errors.password}
+                      </p>
+                    ) : null}
+
+                    <p className="text-[12px] text-[#697077] pt-[4px]">
+                      It must be a combination of minimum 8 letters, numbers,
+                      and symbols.
                     </p>
-                  ) : null}
-
-                  <p className="text-[12px] text-[#697077] pt-[4px]">
-                    It must be a combination of minimum 8 letters, numbers, and
-                    symbols.
-                  </p>
-                </div>
-                <div className="flex justify-between text-[14px]">
-                  <div className="flex align-center gap-[10px]">
-                    <input type="checkbox" id="Remember" className="w-[20px]" />
-                    <label htmlFor="Remember">Remember Me</label>
                   </div>
-                  <a href="">Forgot Password?</a>
+                  <div className="flex justify-between text-[14px]">
+                    <div className="flex align-center gap-[10px]">
+                      <input
+                        type="checkbox"
+                        id="Remember"
+                        className="w-[20px]"
+                      />
+                      <label htmlFor="Remember">Remember Me</label>
+                    </div>
+                    <a href="">Forgot Password?</a>
+                  </div>
+                  {authenticationError && (
+                    <p className="text-red-600">{authenticationError}</p>
+                  )}
+                  <button
+                    className="w-[100%] bg-[#071952] hover:outline hover:outline-2 hover:outline-[#071952] rounded-lg text-white p-2 hover:bg-white hover:text-[#071952]"
+                    type="submit"
+                  >
+                    Log In
+                  </button>
                 </div>
-                {authenticationError && (
-                  <p className="text-red-600">{authenticationError}</p>
-                )}
-                <button
-                  className="w-[100%] bg-[#0F62FE] text-white p-[10px]"
-                  type="submit"
-                >
-                  Log In
-                </button>
-              </div>
-              <div className="flex items-center gap-4 md:flex md:flex-row flex-col ">
-                <Button actiond={googleAction} img={Google.src}>
-                  Login with Google
-                </Button>
-                <Button actiond={appleAction} img={Apple.src}>
-                  Login with Apple
-                </Button>
-              </div>
-              <div className="border-[1px]"></div>
-              <p className="text-[14px]">
-                No account yet?{" "}
-                <Link
-                  href="/vehiclevista-inspector/SignUp"
-                  className="text-[#0F62FE]"
-                >
-                  Sign up
+                <div className="flex items-center justify-center gap-1 md:flex md:flex-row flex-col ">
+                  <Button actiond={googleAction} img={Google.src}>
+                  <span className="text-sm md:text-md">Login with Google</span>
+                  </Button>
+                  <Button actiond={appleAction} img={Apple.src}>
+                  <span className="text-sm md:text-md">Login with Apple</span>
+                  </Button>
+                </div>
+                <div className="border-[1px]"></div>
+                <p className="text-sm text-center">
+                  No account yet?{" "}
+                  <Link
+                    href="/vehiclevista-inspector/SignUp"
+                    className="text-[#071952] underline"
+                  >
+                    Sign up
+                  </Link>
+                </p>
+                <p className="text-sm text-center">
+                Back to {" "}
+                <Link href="/" className="text-[#071952] underline">
+                  Home
                 </Link>
               </p>
-            </form>
+              </form>
+            </div>
           </div>
         </>
       )}

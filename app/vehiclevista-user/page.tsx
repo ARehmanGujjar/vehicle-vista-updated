@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       ) : (
         <>
-        <div className="m-auto border shadow-lg border-black rounded-lg font-poppins mt-5">
+        <div className="m-auto border shadow-lg border-black rounded-lg mt-5">
 
           <div className="img m-auto">
             <Image
@@ -85,7 +85,7 @@ export default function Home() {
               height={100}
             />
           </div>
-          <div className="right m-auto font-poppins">
+          <div className="right m-auto">
             <form
               className="container flex flex-col gap-1 sm:justify-center sm:px-10 py-1 px-2"
               method="diaolog"
@@ -94,7 +94,7 @@ export default function Home() {
               <h1 className="SignIn text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952]">Welcome Back!</h1>
               <div className="userInput flex flex-col gap-2">
                 <div className="email ">
-                  <p className="text-sm md:text-lg font-poppins">email address</p>
+                  <p className="text-sm md:text-lg">email address</p>
                   <input
                     type="email"
                     name="email"
@@ -165,13 +165,13 @@ export default function Home() {
                 </Button>
               </div>
               <div className="border-[1px]"></div>
-              <p className="text-[14px] text-center">
+              <p className="text-md text-center">
                 No account yet?{" "}
                 <Link href="/SignUp" className="text-[#071952] underline">
                   Sign up
                 </Link>
               </p>
-              <p className="text-[14px] text-center">
+              <p className="text-md text-center">
                 Back to {" "}
                 <Link href="/" className="text-[#071952] underline">
                   Home

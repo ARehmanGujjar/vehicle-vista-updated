@@ -17,7 +17,7 @@ import axiosInstance from "../lib/axiosInstance";
 const initialValues = {
   firstName: "",
   lastName: "",
-  email: "",
+  email: "", 
   password: "",
   remember: false,
 };
@@ -80,7 +80,7 @@ export default function SignUp() {
           onSubmit={handleSubmit}
           className="container flex flex-col gap-[30px] sm:justify-center min-h-[100vh] sm:px-[40px]   px-[20px]"
         >
-          <h1 className=" font-bold text-[42px]">Sign Up</h1>
+          <h1 className="SignUp text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952]">Sign Up</h1>
           <div className="userInput flex flex-col gap-[12px]">
             <div className="flex justify-between ">
               <div className="w-[49%]">
@@ -92,7 +92,7 @@ export default function SignUp() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   placeholder="First Name"
-                  className=" w-[100%]  outline-none border-b-2  px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                  className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
                 />
                 <br />
                 {errors.firstName && touched.firstName ? (
@@ -109,7 +109,7 @@ export default function SignUp() {
                   onChange={handleChange}
                   value={values.lastName}
                   placeholder="Last Name"
-                  className=" w-[100%]  outline-none border-b-2  px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                  className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
                 />
                 <br />
                 {errors.lastName && touched.lastName ? (
@@ -128,7 +128,7 @@ export default function SignUp() {
                 onChange={handleChange}
                 value={values.email}
                 placeholder="Enter Email Here"
-                className=" w-[100%]  outline-none border-b-2  px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                className=" w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
               />
               <br />
               {errors.email && touched.email ? (
@@ -138,7 +138,7 @@ export default function SignUp() {
             </div>
             <div className="">
               <p className="text-[14px]">Password</p>
-              <div className="flex  border-b-2 bg-[#F2F4F8] px-[8px]">
+              <div className="flex border border-black bg-[#F2F4F8] rounded-lg p-2">
                 <input
                   type="password"
                   name="password"
@@ -171,13 +171,13 @@ export default function SignUp() {
               </div>
             </div>
             <button
-              className="w-[100%] bg-[#0F62FE] text-white p-[10px]"
+              className="w-[100%] bg-[#071952] hover:outline hover:outline-2 hover:outline-[#071952] rounded-lg text-white p-2 hover:bg-white hover:text-[#071952]"
               type="submit"
             >
               Sign Up
             </button>
           </div>
-          <div className="flex items-center gap-4 md:flex md:flex-row flex-col ">
+          <div className="flex items-center gap-1 md:flex md:flex-row flex-col ">
             <Button actiond={googleAction} img={Google.src}>
               Login with Google
             </Button>
