@@ -4,7 +4,7 @@ import HeroImg from "@/app/public/mainPageimages/heroImg.jpg"
 const Hero = () => {
   return (
     <>
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font h-[90vh]">
   <div className="container mx-auto flex px-3 py-10 md:px-5 md:py-16 sm:py-24 md:flex-row flex-col items-center">
     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h1 className="title-font sm:text-4xl md:text-5xl text-3xl mb-4 font-dancing font-medium text-[#071952]">Car Inspection at

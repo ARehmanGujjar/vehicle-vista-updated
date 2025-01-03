@@ -8,6 +8,7 @@ import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import "leaflet-routing-machine";
 import { useSelector } from "react-redux";
 import axiosInstance from "@/app/lib/axiosInstance";
+import { Loader } from "lucide-react";
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -174,7 +175,7 @@ const Page: React.FC = () => {
           )}
         </MapContainer>
       ) : (
-        <p>Loading map...</p>
+        <Loader/>
       )}
     </div>
   );

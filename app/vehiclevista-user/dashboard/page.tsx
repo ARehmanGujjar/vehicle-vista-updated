@@ -12,6 +12,8 @@ import repair from "../../public/img/repair.png";
 import repair2 from "../../public/img/2.png";
 import InspectorPopup from "./components/InspectorPopup";
 import Link from "next/link";
+import Loaderss from "@/app/Components/MainPage/Loaderss"
+
 
 // Fix Leaflet icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -196,12 +198,12 @@ const Page: React.FC = () => {
                   ),
               }}
             ></Marker>
-          ))}
+          ))} 
 
           {route && <RoutingControl start={position} end={route} />}
         </MapContainer>
       ) : (
-        <p>Loading map...</p>
+      <Loaderss/>
       )}
 
       {popupInfo && (

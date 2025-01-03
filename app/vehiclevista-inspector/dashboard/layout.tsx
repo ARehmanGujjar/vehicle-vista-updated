@@ -58,9 +58,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
       ) : (
         // <AuthWrapper>
         <div className="dasboardMain flex w-[100%]">
-          <div className="dashBoardNav w-[15%] min-h-[100vh] border-2 pt-[20px] sticky">
+          <div className="dashBoardNav w-[25%] min-h-[100vh] rounded-lg m-1 border-2 pt-[20px] sticky">
             <div className="flex flex-col items-center gap-8 px-3">
-              <h2 className="text-[28px] text-[#529DC7] font-bold w-[100%] pl-[10px]">
+              <h2 className="text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952] mb-4">
                 Inspector Panel
               </h2>
               <div className="w-[100%] flex flex-col gap-6 pl-[10px]">
@@ -70,7 +70,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
                     <Link
                       key={item.id}
                       href={item.loc}
-                      className="flex gap-2 items-center text-[#9198ad] hover:text-[#529DC7] focus:text-[#529DC7] focus:border-l-2 focus:border-[#529DC7] "
+                      className="flex gap-2 items-center text-gray-500 rounded-lg border-gray-200 border hover:text-[#071952] hover:border-[#071952] focus:text-white focus:border-l-2 focus:rounded-lg focus: p-1 focus:bg-[#071952] focus:border-[#071952] "
                     >
                       <Icon></Icon>
 

@@ -104,7 +104,7 @@ export default function Page() {
     <div className="Login w-[full] h-[100vh] sm:flex">
       <div className="left sm:w-[50%]">
         <img
-          className="sm:w-[100%] sm:h-[100vh] w-[100%] h-[30vh] bg-blue"
+          className="sm:w-[100%] sm:h-[95vh] w-[100%] rounded-lg m-1 h-[30vh] bg-blue"
           src={inspectorSignup.src}
           alt=""
         />
@@ -113,9 +113,9 @@ export default function Page() {
         <form
           method="dialog"
           onSubmit={handleSubmit}
-          className="container flex flex-col gap-[30px] sm:justify-center min-h-[100vh] sm:px-[40px] px-[20px]"
+          className="container flex flex-col gap-1 sm:justify-center sm:px-10 py-1 px-2"
         >
-          <h1 className="font-bold text-[42px]">Sign Up</h1>
+          <h1 className="text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952] mb-4">Sign Up</h1>
 
           <div className="error-message text-red-600 text-center">
             {errorMessage && <p>{errorMessage}</p>}
@@ -158,7 +158,7 @@ export default function Page() {
                   name="profilePicture"
                   accept="image/*"
                   onChange={handleFileChange}
-                  className="w-[80%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                  className="w-[80%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] rounded-lg text-[14px]"
                 />
               )}
             </div>
@@ -174,7 +174,7 @@ export default function Page() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   placeholder="First Name"
-                  className="w-[100%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                  className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
                 />
                 {errors.firstName && touched.firstName ? (
                   <p className="form-error text-red-600">{errors.firstName}</p>
@@ -189,7 +189,7 @@ export default function Page() {
                   onChange={handleChange}
                   value={values.lastName}
                   placeholder="Last Name"
-                  className="w-[100%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                  className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
                 />
                 {errors.lastName && touched.lastName ? (
                   <p className="form-error text-red-600">{errors.lastName}</p>
@@ -206,7 +206,7 @@ export default function Page() {
                 onChange={handleChange}
                 value={values.email}
                 placeholder="Enter Email Here"
-                className="w-[100%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
               />
               {errors.email && touched.email ? (
                 <p className="form-error text-red-600">{errors.email}</p>
@@ -222,7 +222,7 @@ export default function Page() {
                 onChange={handleChange}
                 value={values.address}
                 placeholder="Enter Address Here"
-                className="w-[100%] outline-none border-b-2 px-[8px] py-[4px] bg-[#F2F4F8] text-[14px]"
+                className="w-[100%] outline-none p-2 border border-black rounded-lg bg-[#F2F4F8] sm:text-md text-sm"
               />
               {errors.address && touched.address ? (
                 <p className="form-error text-red-600">{errors.address}</p>
@@ -231,7 +231,7 @@ export default function Page() {
 
             <div>
               <p className="text-[14px]">Password</p>
-              <div className="flex border-b-2 bg-[#F2F4F8] px-[8px]">
+              <div className="flex border border-black bg-[#F2F4F8] rounded-lg p-2">
                 <input
                   type="password"
                   name="password"
@@ -266,7 +266,7 @@ export default function Page() {
             </div>
 
             <button
-              className="w-[100%] bg-[#0F62FE] text-white p-[10px]"
+              className="w-[100%] bg-[#071952] hover:outline hover:outline-2 hover:outline-[#071952] rounded-lg text-white p-2 hover:bg-white hover:text-[#071952]"
               type="submit"
             >
               Sign Up

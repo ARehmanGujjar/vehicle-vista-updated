@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/app/Components/Header";
-import Footer from "@/app/Components/Footer";
 import { Provider } from "react-redux";
 import StoreProvider from "./lib/StoreProvider";
 import NextTopLoader from "nextjs-toploader";
@@ -31,7 +29,7 @@ export default function RootLayout({
        
         
       </head>
-      <body className="max-w-[90%] m-auto font-poppins">
+      <body className="max-w-[95%] m-auto font-poppins">
         <StoreProvider>
           <NextTopLoader />
           {/* <Header /> */}

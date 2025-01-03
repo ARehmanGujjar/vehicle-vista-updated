@@ -7,6 +7,7 @@ import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css"; // Ensure Routing Machine is imported
 import { useSelector } from "react-redux";
 import axiosInstance from "@/app/lib/axiosInstance";
+import Loaderss from "@/app/Components/MainPage/Loaderss"
 
 // Fix Leaflet icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -160,7 +161,7 @@ const Page: React.FC = () => {
           {route && <RoutingControl start={position} end={route} />}
         </MapContainer>
       ) : (
-        <p>Loading map...</p>
+        <Loaderss/>
       )}
     </div>
   );
