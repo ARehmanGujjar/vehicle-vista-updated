@@ -8,6 +8,7 @@ import Apple from "../../images/Apple.svg";
 import Button from "../Button/Button";
 import { useFormik, Formik, Form, Field } from "formik";
 import { useRouter } from "next/navigation";
+import back from "@/app/public/img/back_button.png"
 
 const initialValues = {
   email: "",
@@ -75,7 +76,12 @@ export default function Home() {
       ) : (
         <>
         <div className="m-auto border shadow-lg border-black rounded-lg mt-5">
-
+        <Link href={"/"} className="absolute top-10 left-6 md:top-10  w-10 h-auto md:w-12 md:h-10 md:left-10 rounded-full bg-[#071952]">
+      <Image
+          className="w-auto h-auto m-auto"
+          src={back}  width={20} height={20}     alt="back button"
+        />
+      </Link>
           <div className="img m-auto">
             <Image
               className="w-44 sm:w-56 sm:h-50 m-auto"

@@ -36,8 +36,9 @@ const Header = () => {
             <Link href={"/about"} className="mr-5 m-2 hover:text-gray-900">
               About
             </Link>
-            <a className="mr-5 m-2 hover:text-gray-900">Contact Us</a>
-            <a className="mr-5 m-2 hover:text-gray-900">Services</a>
+            <Link href={"/contact"} className="mr-5 m-2 hover:text-gray-900">
+              Contact 
+            </Link>
           </nav>
           <div className="justify-center items-center gap-2 md:flex">
           <Link href={"/vehiclevista-user"}>
@@ -73,8 +74,9 @@ const Header = () => {
             <Link href={"/about"} className="mr-5 hover:text-gray-900">
               About
             </Link>
-            <a className="mr-5 hover:text-gray-900">Contact Us</a>
-            <a className="mr-5 hover:text-gray-900">Services</a>
+            <Link href={"/contact"} className="mr-5 hover:text-gray-900">
+              Contact
+            </Link>
           </nav>
           <div className="justify-center items-center gap-2 hidden md:flex">
             <Link href={"/vehiclevista-user"}>

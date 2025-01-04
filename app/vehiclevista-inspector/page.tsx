@@ -7,6 +7,7 @@ import Google from "../../images/Google.svg";
 import Apple from "../../images/Apple.svg";
 import Leftimg from "../../images/Leftimg.jpg";
 import inspectorSignup from "../public/img/inspectorSignup.jpg";
+import back from "@/app/public/img/back_button.png"
 
 import Button from "../Button/Button";
 import { useFormik, Formik, Form, Field } from "formik";
@@ -79,6 +80,12 @@ export default function Home() {
       ) : (
         <>
           <div className="m-auto border shadow-lg relative border-black rounded-lg font-poppins mt-5">
+          <Link href={"/"} className="absolute top-3 left-6 md:top-10  w-10 h-auto md:w-12 md:h-10 md:left-10 rounded-full bg-[#071952]">
+      <Image
+          className="w-auto h-auto m-auto"
+          src={back}  width={20} height={20}     alt="back button"
+        />
+      </Link>
             <div className="img m-auto flex">
               <Image
                 className="w-44 sm:w-56 sm:h-50 m-auto"

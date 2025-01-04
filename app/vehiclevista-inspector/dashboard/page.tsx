@@ -91,7 +91,7 @@ const Page: React.FC = () => {
         },
         (error) => {
           console.error("Error accessing geolocation:", error);
-          alert("Unable to access your location. Please check permissions.");
+          alert("VehicleVista wants to know your location");
         }
       );
     } else {

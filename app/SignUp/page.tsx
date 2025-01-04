@@ -4,7 +4,6 @@ import Eye from "../../images/PasswordEye.svg";
 import Google from "../../images/Google.svg";
 import Apple from "../../images/Apple.svg";
 import Button from "../Button/Button";
-import Link from "next/link";
 import Leftimg from "../../images/Leftimg.jpg";
 import { useState } from "react";
 import { useFormik, Formik, Form, Field } from "formik";
@@ -13,6 +12,10 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import axiosInstance from "../lib/axiosInstance";
+import Image from "next/image";
+import Link from "next/link";
+import back from "@/app/public/img/back_button.png"
+
 
 const initialValues = {
   firstName: "",
@@ -66,21 +69,27 @@ export default function SignUp() {
   }
 
   return (
-    <div className="Login w-[full]  h-[100vh] sm:flex">
-      <div className="left sm:w-[50%]">
+    <div className="Login w-[full]  h-[100vh] lg:flex">
+      <Link href={"/"} className="absolute top-3 left-6 md:top-10  w-10 h-auto md:w-12 md:h-10 md:left-10 rounded-full bg-[#071952]">
+      <Image
+          className="w-auto h-auto m-auto"
+          src={back}  width={20} height={20}     alt="back button"
+        />
+      </Link>
+      <div className="left lg:w-[50%]"> 
         <img
-          className="sm:w-[100%] sm:h-[100vh] w-[100%] h-[30vh] bg-blue"
-          src={Leftimg.src}
+          className="lg:w-[100%] lg:h-[100vh] w-auto bg-blue"
+          src={"/mainPageimages/heroimganime.jpg"}
           alt=""
         />
       </div>
-      <div className="right sm:w-[50%] font-Roboto">
+      <div className="right lg:w-[50%] font-Roboto">
         <form
           method="dialog"
           onSubmit={handleSubmit}
           className="container flex flex-col gap-[30px] sm:justify-center min-h-[100vh] sm:px-[40px]   px-[20px]"
         >
-          <h1 className="SignUp text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952]">Sign Up</h1>
+          <h1 className="SignUp text-2xl sm:text-3xl md:text-4xl text-center font-dancing text-[#071952]">Sign Up</h1>
           <div className="userInput flex flex-col gap-[12px]">
             <div className="flex justify-between ">
               <div className="w-[49%]">

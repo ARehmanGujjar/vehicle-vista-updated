@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Eye from "../../../images/PasswordEye.svg";
-import Google from "../../../images/Google.svg";
-import Apple from "../../../images/Apple.svg";
-import Button from "../../Button/Button";
-import Link from "next/link";
+import back from "@/app/public/img/back_button.png"
 import inspectorSignup from "../../public/img/inspectorSignup.jpg";
 import { useFormik } from "formik";
 import { FormValidation } from "../../Validation/FormValidation";
@@ -13,6 +10,8 @@ import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "@/FirebaseConfig";
+import Image from "next/image";
+import Link from "next/link";
 
 const initialValues = {
   firstName: "",
@@ -101,21 +100,26 @@ export default function Page() {
   };
 
   return (
-    <div className="Login w-[full] h-[100vh] sm:flex">
-      <div className="left sm:w-[50%]">
-        <img
-          className="sm:w-[100%] sm:h-[95vh] w-[100%] rounded-lg m-1 h-[30vh] bg-blue"
-          src={inspectorSignup.src}
-          alt=""
+    <div className="Login w-[full] h-[100vh] sm:flex my-1">
+      <Link href={"/"} className="absolute top-3 left-6 md:top-10  w-10 h-auto md:w-12 md:h-10 md:left-10 rounded-full bg-[#071952]">
+      <Image
+          className="w-auto h-auto m-auto"
+          src={back}  width={20} height={20}     alt="back button"
+        />
+      </Link>
+      <div className="left lg:w-[50%] w-auto h-auto">
+        <Image
+          className="lg:w-[100%] lg:h-[95vh] w-[100vw] h-auto rounded-lg m-1 bg-blue"
+          src={"/mainPageimages/heroimganime.jpg"} width={150} height={150}     alt="signup page"
         />
       </div>
-      <div className="right sm:w-[50%] font-Roboto">
+      <div className="right lg:w-[50%] font-Roboto">
         <form
           method="dialog"
           onSubmit={handleSubmit}
           className="container flex flex-col gap-1 sm:justify-center sm:px-10 py-1 px-2"
         >
-          <h1 className="text-lg sm:text-lg md:text-4xl text-center font-dancing text-[#071952] mb-4">Sign Up</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-dancing text-[#071952] mb-4">Sign Up</h1>
 
           <div className="error-message text-red-600 text-center">
             {errorMessage && <p>{errorMessage}</p>}

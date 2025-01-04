@@ -31,7 +31,7 @@ const ContacthtmlForm = () => {
                         </g>
                     </g>
                 </svg>
-                <span className="text-sm">House #14, Street #12, Johar Town, Lahore, PAkistan.</span>
+                <span className="text-sm">House #14, Street #12, Johar Town, Lahore, Pakistan.</span>
             </div>
             <div className="flex items-center mt-5">
                 <svg className="h-6 mr-2 text-[#071952]" fill="currentColor" version="1.1" id="Capa_1"
@@ -69,7 +69,7 @@ const ContacthtmlForm = () => {
                         </path>
                     </g>
                 </svg>
-                <span className="text-sm">+93 749 99 65 50</span>
+                <span className="text-sm">+92 336 9999035</span>
             </div>
             <div className="flex items-center mt-5">
                 <svg className="h-6 mr-2 text-[#071952]" fill="currentColor" version="1.1" id="Capa_1"

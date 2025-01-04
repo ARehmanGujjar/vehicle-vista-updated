@@ -2,7 +2,7 @@ import inspector1 from "@/app/public/mainPageimages/inspector1.png"
 import inspector2 from "@/app/public/mainPageimages/inspector2.png"
 import inspector3 from "@/app/public/mainPageimages/inspector4.jpg"
 import rating from "@/app/public/mainPageimages/star.png"
-
+import Link from "next/link"
 import Image from "next/image";
 const NearInspect = () => {
   return (
@@ -29,7 +29,7 @@ const NearInspect = () => {
                     We are serving to town for more than 20 years,having
                     expertise on engine maintainace{" "}
                   </p>
-                  <div className="flex items-center flex-wrap ">
+                  <Link href={"/vehiclevista-user"} className="flex items-center flex-wrap ">
                     <button className="bg-[#071952] text-white p-1 rounded-lg inline-flex items-center md:mb-2 lg:mb-0">
                       Book Now
                       <svg
@@ -69,7 +69,7 @@ const NearInspect = () => {
                       ></Image>
                       4.7
                     </span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ const NearInspect = () => {
                   <p className="leading-relaxed mb-3 line-clamp-3">
                     Premium Service, Available all over the Lahore, Engine specialist for Honda, Suzuki, Available to work
                   </p>
-                  <div className="flex items-center flex-wrap ">
+                  <Link href={"/vehiclevista-user"} className="flex items-center flex-wrap ">
                     <button className="bg-[#071952] text-white p-1 rounded-lg inline-flex items-center md:mb-2 lg:mb-0">
                       Book Now
                       <svg
@@ -131,7 +131,7 @@ const NearInspect = () => {
                       ></Image>
                       4.7
                     </span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@ const NearInspect = () => {
                   <p className="leading-relaxed mb-3">
                     All Spare Parts available for all car brands like Suzuki, Honda, Custom car modification, plus Engine expert
                   </p>
-                  <div className="flex items-center flex-wrap ">
+                  <Link href={"/vehiclevista-user"} className="flex items-center flex-wrap ">
                     <button className="bg-[#071952] text-white p-1 rounded-lg inline-flex items-center md:mb-2 lg:mb-0">
                       Book Now
                       <svg
@@ -191,7 +191,7 @@ const NearInspect = () => {
                       ></Image>
                       4.7
                     </span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

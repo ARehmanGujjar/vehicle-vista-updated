@@ -1,5 +1,6 @@
 import Logo from "@/app/public/logoImages/appLogo.png"
 import Image from "next/image"
+import Link from "next/link"
 const Footer = () => {
   return (
     <>
@@ -17,34 +18,31 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Company</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">About</a>
+            <Link href="/about" className="text-gray-600 hover:text-gray-800">About</Link>
+          </li>
+         
+          <li>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact Us</Link>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Services</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Join Us</a>
+            <Link href="/join Us" className="text-gray-600 hover:text-gray-800">Join Us</Link>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Privacy Policy</h2>
         <nav className="list-none mb-10">
+          
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Latest Update</a>
+            <Link href="/general/policy" className="text-gray-600 hover:text-gray-800">Policy</Link>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Version</a>
+            <Link href="/general/version" className="text-gray-600 hover:text-gray-800">Version</Link>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">whats New</a>
+            <Link href="/general/policy" className="text-gray-600 hover:text-gray-800">what's new</Link>
           </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Address</a>
-          </li>
+          
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -65,7 +63,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Others</h2>
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Coming soon</h2>
         <nav className="list-none mb-10">
           <li>
             <a className="text-gray-600 hover:text-gray-800">Spare Parts </a>
